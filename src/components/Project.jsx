@@ -1,7 +1,7 @@
 import React from "react";
 
 import Tilt from "react-parallax-tilt";
-import { Motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 import jj from "../assets/jj.png";
 import medi from "../assets/medi.jpeg";
