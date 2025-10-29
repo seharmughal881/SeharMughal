@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -9,10 +10,9 @@ function ContactSection() {
   const sectionRef = useRef(null);
   const initialTextRef = useRef(null);
   const finalTextRef = useRef(null);
-
-  // ✅ Contact form state
-  const [contactFormOpen, setContactFormOpen] = useState(false);
   const form = useRef();
+
+  const [contactFormOpen, setContactFormOpen] = useState(false);
 
   const openContactForm = () => setContactFormOpen(true);
   const closeContactForm = () => setContactFormOpen(false);
@@ -44,7 +44,6 @@ function ContactSection() {
 
     const cleanUp = () => {
       ScrollTrigger.getAll().forEach((st) => {
-        // Make sure st.kill exists before calling
         if (st && st.kill && st.vars.trigger === sectionRef.current) {
           st.kill();
         }
@@ -127,20 +126,20 @@ function ContactSection() {
         >
           COME <br /> HERE!
         </p>
+
         {/* Final Text */}
         <div
           ref={finalTextRef}
           className="text-center relative flex flex-col items-center justify-center opacity-0"
         >
-          
           <h1 className="text-black md:w-[15rem] w-[21rem] lg:scale-[0.2] sm:scale-[0.14] scale-[0.05] md:font-bold text-sm sm:text-base leading-none mb-7 md:mb-5">
             Step Into The Future With Sehar_CodeCraft!
           </h1>
           <p className="text-black lg:w-[40rem] w-[20rem] absolute sm:mt-3 mt-1 md:scale-[0.1] scale-[0.068]">
             I’m still learning and growing in web development, and that’s what
             makes my work fresh and creative. Looking for a web developer who
-            brings creative solutions and delivers work people love? I
-            craft websites that stand out, combining clean design, smooth
+            brings creative solutions and delivers work people love? I craft
+            websites that stand out, combining clean design, smooth
             functionality, and attention to detail. Whether it’s a personal
             brand site or a complex project, I make your vision shine online and
             leave a lasting impression. Let’s create something exceptional
@@ -174,7 +173,7 @@ function ContactSection() {
               transition={{
                 type: "spring",
                 damping: 30,
-                stiffness: 200, 
+                stiffness: 200,
                 duration: 0.8,
               }}
               className="bg-white dark:bg-gray-800 rounded-xl shadow-xl w-full max-w-md p-6"
