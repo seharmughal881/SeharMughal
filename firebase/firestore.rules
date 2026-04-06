@@ -1,0 +1,15 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow read/write access to contacts collection
+    match /contacts/{documentId} {
+      allow create: if request.time < timestamp.date(2025, 1, 1);
+      allow read, write: if false;
+    }
+    
+    // Deny all other access
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

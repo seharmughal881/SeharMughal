@@ -173,7 +173,7 @@ import "react-vertical-timeline-component/style.min.css";
 // import meta from "../assets/meta.png";
 // import shopify from "../assets/shopify.png";
 // import tesla from "../assets/tesla.png";
-import heap from "../assets/heap.jpg";
+import heap from "../assets/heapware-logo.webp";
 
 // ========== Experience Data ==========
 const experiences = [
