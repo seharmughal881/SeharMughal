@@ -204,7 +204,7 @@ const AboutSection = () => {
 
         <img
           className="lg:h-[30rem] md:h-[15rem] h-[20rem] mix-blend-lighten mt-8 md:mt-0"
-          src="/public/images/image.png"
+          src="/images/image.png"
           alt="me"
         />
       </div>
